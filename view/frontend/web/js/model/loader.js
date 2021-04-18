@@ -4,7 +4,7 @@ define([
 ], function ($, resolver) {
     'use strict';
 
-    const container = '.cv-container
+    const container = '.cv-container';
 
     return {
         startLoader: function () {
