@@ -74,7 +74,7 @@ class Cv implements ArgumentInterface
             return $this->serializer->serialize([]);
         }
 
-        $cv = $this->cvRepository->get($this->getCvId($cvId));
+        $cv = $this->cvRepository->get($cvId);
 
         if (!$cv->getId()) {
             return $this->serializer->serialize([]);
