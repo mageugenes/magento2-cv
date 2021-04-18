@@ -1,0 +1,14 @@
+{
+    "mageugenes_cv": {
+        "column": {
+            "id": true,
+            "first_name": true,
+            "last_name": true,
+            "year_of_birth": true,
+            "experience": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<div class="mageugenes-cv">
+    <ul>
+        <li>
+            <h2><span data-bind="text: $data.cv.first_name"></span> <span data-bind="text: $data.cv.last_name"></span></h2>
+        </li>
+        <!-- ko if: ($data.cv.year_of_birth) -->
+        <li>
+            <div class="cv-key" data-bind="i18n: 'Year of birth'"></div>
+
+            <div data-bind="text: $data.cv.year_of_birth"></div>
+        </li>
+        <!-- /ko -->
+        <!-- ko if: ($data.cv.education) -->
+        <li>
+            <div class="cv-key" data-bind="i18n: 'Education'"></div>
+            <div data-bind="html: $data.cv.education"></div>
+        </li>
+        <!-- /ko -->
+        <!-- ko if: ($data.cv.experience) -->
+        <li>
+            <div class="cv-key" data-bind="i18n: 'Experience'"></div>
+            <div data-bind="html: $data.cv.experience"></div>
+        </li>
+        <!-- /ko -->
+    </ul>
+    <!-- ko if: ($data.cv.length == 0) -->
+    <div class="message info empty">
+        <span>There is no cv.</span>
+    </div>
+    <!-- /ko -->
+</div>

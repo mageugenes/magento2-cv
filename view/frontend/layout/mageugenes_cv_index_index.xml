@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Mageugenes_Cv::css/cv.css"/>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">CV</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="mageugenes.cv.block.list"
+                   template="Mageugenes_Cv::cv.phtml">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">Mageugenes\Cv\ViewModel\Cv</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

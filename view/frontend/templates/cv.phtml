@@ -1,0 +1,28 @@
+<?php
+
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+
+$cvViewModel = $this->getData('viewModel');
+
+?>
+
+<div class="cv-container" data-bind="scope: 'cv'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "cv": {
+                        "component": "Mageugenes_Cv/js/view/cv",
+                        "cv": <?= $cvViewModel->getCvJson(); ?>
+                    }
+                }
+            }
+        }
+    }
+</script>

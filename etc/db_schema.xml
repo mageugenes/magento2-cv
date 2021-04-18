@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="mageugenes_cv" resource="default" comment="CV data">
+        <column xsi:type="int" name="id"
+                identity="true"
+                padding="10"
+                unsigned="true"
+                nullable="false"
+                comment="CV ID"/>
+
+        <column xsi:type="varchar" name="first_name"
+                length="255"
+                nullable="false"
+                comment="First Name"/>
+
+        <column xsi:type="varchar" name="last_name"
+                length="255"
+                nullable="false"
+                comment="Last Name"/>
+
+        <column xsi:type="int" name="year_of_birth"
+                padding="4"
+                unsigned="true"
+                nullable="true"
+                comment="Year of birth"/>
+
+        <column xsi:type="text" name="experience"
+                nullable="false"
+                comment="Experience"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

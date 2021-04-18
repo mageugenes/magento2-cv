@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mageugenes\Cv\Api\CvRepositoryInterface" type="Mageugenes\Cv\Service\CvRepository"/>
+    <preference for="Mageugenes\Cv\Api\Data\CvInterface" type="Mageugenes\Cv\Model\Cv"/>
+</config>
